@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RecipeList: View {
+    
+    @State private var showAddRecipe: Bool = false
+    
     var body: some View {
         NavigationView {
             List(0 ..< 15) { item in
@@ -16,9 +19,14 @@ struct RecipeList: View {
                 }
             }.navigationBarTitle(Text("Recipes"))
             .navigationBarItems(trailing:
-                                    Button(action: {print("button pressed")}, label: {
+                                    Button(action: {
+                                            print("button pressed")
+                                        self.showAddRecipe = true
+                                    }, label: {
                                         Image(systemName: "plus.circle")
-                                    })
+                                    }).sheet(isPresented: self.$showAddRecipe) {
+                                        AddRecipe()
+                                      }
             )
         }
     }

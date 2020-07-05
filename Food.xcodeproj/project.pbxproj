@@ -19,6 +19,11 @@
 		1EA1325724B281C9001391D1 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1325524B281C9001391D1 /* ShoppingList.swift */; };
 		1EA1325924B281D5001391D1 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1325824B281D5001391D1 /* RecipeList.swift */; };
 		1EA1325A24B281D5001391D1 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1325824B281D5001391D1 /* RecipeList.swift */; };
+		1EA1325E24B28680001391D1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA1325D24B28680001391D1 /* CloudKit.framework */; };
+		1EA1326124B29B7D001391D1 /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1325F24B29B7D001391D1 /* RecipeModel.xcdatamodeld */; };
+		1EA1326224B29B7D001391D1 /* RecipeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1325F24B29B7D001391D1 /* RecipeModel.xcdatamodeld */; };
+		1EA1326424B29EAA001391D1 /* AddRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1326324B29EAA001391D1 /* AddRecipe.swift */; };
+		1EA1326524B29EAA001391D1 /* AddRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA1326324B29EAA001391D1 /* AddRecipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,10 @@
 		1EA1325224B281B1001391D1 /* MealPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlan.swift; sourceTree = "<group>"; };
 		1EA1325524B281C9001391D1 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		1EA1325824B281D5001391D1 /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		1EA1325B24B2867A001391D1 /* Food.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Food.entitlements; sourceTree = "<group>"; };
+		1EA1325D24B28680001391D1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		1EA1326024B29B7D001391D1 /* RecipeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecipeModel.xcdatamodel; sourceTree = "<group>"; };
+		1EA1326324B29EAA001391D1 /* AddRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA1325E24B28680001391D1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +70,7 @@
 				1EA1323A24B280C4001391D1 /* iOS */,
 				1EA1324124B280C4001391D1 /* macOS */,
 				1EA1323924B280C4001391D1 /* Products */,
+				1EA1325C24B28680001391D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +79,9 @@
 			children = (
 				1EA1323124B280C3001391D1 /* FoodApp.swift */,
 				1EA1323224B280C3001391D1 /* ContentView.swift */,
+				1EA1325F24B29B7D001391D1 /* RecipeModel.xcdatamodeld */,
 				1EA1325824B281D5001391D1 /* RecipeList.swift */,
+				1EA1326324B29EAA001391D1 /* AddRecipe.swift */,
 				1EA1325524B281C9001391D1 /* ShoppingList.swift */,
 				1EA1325224B281B1001391D1 /* MealPlan.swift */,
 				1EA1323324B280C4001391D1 /* Assets.xcassets */,
@@ -88,6 +101,7 @@
 		1EA1323A24B280C4001391D1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1EA1325B24B2867A001391D1 /* Food.entitlements */,
 				1EA1323B24B280C4001391D1 /* Info.plist */,
 			);
 			path = iOS;
@@ -100,6 +114,14 @@
 				1EA1324324B280C4001391D1 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		1EA1325C24B28680001391D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EA1325D24B28680001391D1 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,10 +222,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA1325324B281B1001391D1 /* MealPlan.swift in Sources */,
+				1EA1326424B29EAA001391D1 /* AddRecipe.swift in Sources */,
 				1EA1325624B281C9001391D1 /* ShoppingList.swift in Sources */,
 				1EA1325924B281D5001391D1 /* RecipeList.swift in Sources */,
 				1EA1324624B280C4001391D1 /* ContentView.swift in Sources */,
 				1EA1324424B280C4001391D1 /* FoodApp.swift in Sources */,
+				1EA1326124B29B7D001391D1 /* RecipeModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,10 +236,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA1325424B281B1001391D1 /* MealPlan.swift in Sources */,
+				1EA1326524B29EAA001391D1 /* AddRecipe.swift in Sources */,
 				1EA1325724B281C9001391D1 /* ShoppingList.swift in Sources */,
 				1EA1325A24B281D5001391D1 /* RecipeList.swift in Sources */,
 				1EA1324724B280C4001391D1 /* ContentView.swift in Sources */,
 				1EA1324524B280C4001391D1 /* FoodApp.swift in Sources */,
+				1EA1326224B29B7D001391D1 /* RecipeModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/Food.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53YXMG5TK4;
 				ENABLE_PREVIEWS = YES;
@@ -360,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS/Food.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53YXMG5TK4;
 				ENABLE_PREVIEWS = YES;
@@ -457,6 +485,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1EA1325F24B29B7D001391D1 /* RecipeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1EA1326024B29B7D001391D1 /* RecipeModel.xcdatamodel */,
+			);
+			currentVersion = 1EA1326024B29B7D001391D1 /* RecipeModel.xcdatamodel */;
+			path = RecipeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1EA1322C24B280C3001391D1 /* Project object */;
 }
